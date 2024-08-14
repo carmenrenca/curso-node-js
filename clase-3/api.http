@@ -1,0 +1,23 @@
+### Recuperar todas las peliculas
+GET  http://localhost:1234/movies
+### Recuperar una pelicula por ID
+GET  http://localhost:1234/movies/7e3fd5ab-60ff-4ae2-92b6-9597f0308d1
+
+### Recuperar todas las películas por un género
+GET  http://localhost:1234/movies?genre=DRAMA
+
+### Para crear una pelicula
+POST http://localhost:1234/movies
+Content-Type:  application/json
+
+  { 
+    "title": "Inside Out",
+    "year": 2024,
+    "director": "Disney",
+    "duration": 142,
+    "poster": "https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2024/06/IO2_Specialty_Headquarters_1s_v7.0_Mech5_FS-scaled.jpg?resize=2000%2C1279&quality=55&strip=all&ssl=1",
+    "genre": [
+      "Action"
+    ],
+    "rate": 9.3
+  }
